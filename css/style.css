@@ -50,6 +50,12 @@ body{
   background-color: black; /* 直線の色 */
   margin-top: 45px;
  }
+ @media screen and (max-width: 600px) {
+  .horizontal-line   {
+    width: 14%;
+  }
+}
+ 
 
 .sub-title {
   font-size: 24px;
@@ -121,7 +127,7 @@ body{
 .text_img {
     width: 200px;
     height: auto;
-    padding-top: 5px;
+    padding-top: 17px;
 }
 
   /* メニュー */
@@ -188,9 +194,9 @@ body{
 
 
 /*-------------------------------------------
-↓↓↓↓↓mainvisual↓↓↓↓↓↓
+↓↓↓↓↓TOP↓↓↓↓↓↓
 -------------------------------------------*/
-  #mainvisual{
+  #TOP{
     padding: 0 0; /* 左右に20pxのパディングを追加 */
     margin: 0;
     position: relative;
@@ -201,7 +207,7 @@ body{
 
   }
 
-  .mainvisual_logo {
+  .TOP_logo {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -215,36 +221,36 @@ body{
   #header, .menu {
       display: none; /* スマホ・タブレットでは非表示 */
     }
-    #mainvisual{
+    #TOP{
       padding: 0 ;
     
     }
-    .mainvisual_phone{
+    .TOP_phone{
     display: block; /* スマホでのみ表示する画像 */
     width: 100%;
     height: 100vh;
     object-fit: cover;
   }
-    .mainvisual_pc{
+    .TOP_pc{
     display: none;
   }
   
   }
   @media screen and (min-width: 600px) {
-    .mainvisual_pc{
+    .TOP_pc{
       max-width: 100%;
       margin-top: 50px;
       width: 100%;
       height: 100%; /* メインビジュアルが高さ100%にフィット */
       object-fit: cover; /* 画像がコンテナに収まるよう調整 */
     }
-    .mainvisual_phone{
+    .TOP_phone{
       display: none;
     }
   }
 
 /*-------------------------------------------
-  ↑↑↑↑mainvisual↑↑↑↑↑↑↑
+  ↑↑↑↑TOP↑↑↑↑↑↑↑
 -------------------------------------------*/
 
 /*-------------------------------------------
@@ -327,14 +333,24 @@ body{
 
 
 /*-------------------------------------------
-  about-section
+  about
 -------------------------------------------*/
 
 /* 全体の設定 */
-#about-section {
+#about{
   padding: 0 20%; /* 左右に20pxのパディングを追加 */
   background-color:white; /* 背景色 */
 }
+
+@media screen and (max-width: 600px) {
+  #about{
+  padding: 0 10%;
+  .text-content {  padding-right: 0;
+  }
+  }
+}
+
+
 
 /* タイトルのスタイル */
 .title {
@@ -357,6 +373,13 @@ body{
 .text-content {
   flex: 1; /* 左側のカラムの幅 */
   padding-right: 30px;
+}
+
+@media screen and (max-width: 900px) {
+ 
+  .text-content {
+    padding-right: 0;
+  }
 }
 
 .about-title {
@@ -414,13 +437,20 @@ body{
 
 
 /*-------------------------------------------
-  design-section
+  design
 -------------------------------------------*/
 
 /* 基本スタイル */
-#design-section {
+#design{
   position: relative;
   padding: 0 20%; /* 必要に応じてパディングを調整 */
+}
+@media screen and (max-width: 600px) {
+#design{
+  padding: 0 10%;
+  .text-content {  padding-right: 0;
+  }
+  }
 }
 
 /* サンプル画像の3カラムレイアウト */
@@ -547,20 +577,34 @@ text-align: left; /* 左揃えに設定 */
   .menu-section-description {
     display: flex;
   }
+  
+}
+
+@media screen and (max-width: 600px) {
+.image-description {
+  font-size: 9px; /* 説明文のフォントサイズ */
+}
 }
 
 
-
 /*-------------------------------------------
-  artclass-section
+  artclass
 -------------------------------------------*/
 
 /* 基本スタイル */
-#artclass-section {
+#artclass{
   position: relative;
   padding: 0 20%; /* 必要に応じてパディングを調整 */
   margin-bottom: 90px;
 }
+
+@media screen and (max-width: 600px) {
+#artclass{
+    padding: 0 10%;
+    .text-content {  padding-right: 0;
+    }
+    }
+  }
 
 .artclass-sub-title {
   font-size: 18px;
@@ -590,7 +634,7 @@ text-align: left; /* 左揃えに設定 */
 
 
 /* セクションの説明 */
-.artclass-section-description {
+.artclass-description {
   font-size: 10px;
   font-weight: 600;
   line-height: 1.3;
@@ -722,7 +766,7 @@ text-align: left; /* 左揃えに設定 */
 }
 
 /*-------------------------------------------
-  ↑↑↑↑artclass-section↑↑↑↑↑↑↑
+  ↑↑↑↑artclass↑↑↑↑↑↑↑
 -------------------------------------------*/
 
 .mobile-banner {
@@ -762,12 +806,22 @@ text-align: left; /* 左揃えに設定 */
 
 
 /*-------------------------------------------
-  ↓↓↓↓↓CONTACT-section↓↓↓↓↓↓
+  ↓↓↓↓↓CONTACT↓↓↓↓↓↓
 -------------------------------------------*/
-#contact-section {
+#contact{
   position: relative;
   padding: 0 20%; /* 必要に応じてパディングを調整 */
 }
+
+@media screen and (max-width: 600px) {
+  #contact{
+      padding: 0 10%;
+      .text-content {  padding-right: 0;
+      }
+      }
+    }
+
+
 .contact-container {
   display: flex;
   justify-content: space-between; /* 左右に配置 */
@@ -843,7 +897,7 @@ text-align: left; /* 左揃えに設定 */
 }
 
 /*-------------------------------------------
-  ↑↑↑↑↑↑CONTACT-section↑↑↑↑↑↑
+  ↑↑↑↑↑↑CONTACT↑↑↑↑↑↑
 -------------------------------------------*/
 
 
