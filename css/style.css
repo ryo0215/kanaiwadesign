@@ -466,6 +466,12 @@ body{
   text-align: center; /* 説明文を中央揃え */
   margin-top: 5px; /* 説明文と画像の間隔 */
 }
+@media screen and (max-width: 600px) {
+  .image-description {
+  font-size: 10px;
+  line-height: 1;
+  }
+}
 
   .menu-section-desktop {
     display: block; /* パソコン表示時のみ表示 */
